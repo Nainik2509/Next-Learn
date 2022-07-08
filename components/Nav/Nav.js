@@ -1,15 +1,13 @@
+import Link from "next/link";
 import React from "react";
+import styles from "./Nav.module.css";
 
-const Nav = () => {
+export default function Nav() {
   return (
-    <div>
-      <nav className="navbar bg-light">
-        <div className="container-fluid">
-          <span className="navbar-brand mb-0 h1">Navbar</span>
-        </div>
-      </nav>
-    </div>
+    <nav className="navbar navbar-light bg-light">
+      <Link className={styles["nav-link"]} href="/">
+        Navbar
+      </Link>
+    </nav>
   );
-};
-
-export default Nav;
+}
